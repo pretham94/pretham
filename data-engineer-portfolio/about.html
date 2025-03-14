@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Data Engineer Portfolio</title>
+    <meta name="description" content="Learn about my experience as a Data Engineer with expertise in Big Data, Cloud Technologies, and Data Engineering solutions.">
+    <link rel="stylesheet" href="css/styles.css">
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* About Page Specific Styles */
+        .about-section {
+            padding-top: 120px;
+        }
+        
+        .profile-container {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+        
+        @media (min-width: 768px) {
+            .profile-container {
+                flex-direction: row;
+            }
+            
+            .profile-image {
+                width: 30%;
+            }
+            
+            .profile-content {
+                width: 70%;
+            }
+        }
+        
+        .profile-image {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            position: relative;
+            min-height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-muted);
+            border: 1px solid var(--border-color);
+        }
+        
+        .resume-btn {
+            margin-top: 1.5rem;
+        }
+        
+        .skill-progress {
+            margin-bottom: 1.5rem;
+        }
+        
+        .skill-progress h4 {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 0.5rem;
+        }
+        
+        .progress-bar {
+            height: 8px;
+            background-color: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            overflow: hidden;
+        }
+        
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            border-radius: 4px;
+            width: 0;
+            transition: width 1.5s ease-in-out;
+        }
+        
+        .experience-item {
+            border-left: 2px solid var(--primary-color);
+            padding-left: 20px;
+            position: relative;
+            margin-bottom: 2rem;
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: var(--primary-color);
+            left: -7px;
+            top: 6px;
+        }
+        
+        .experience-item h4 {
+            margin-bottom: 0.5rem;
+        }
+        
+        .experience-meta {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+        
+        .tech-category {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+        }
+        
+        .tech-category h4 {
+            color: var(--primary-color);
+            margin-bottom: 1rem;
+            font-size: 1.2rem;
+        }
+        
+        .tech-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+        
+        .tech-list span {
+            background-color: rgba(37, 99, 235, 0.1);
+            color: var(--text-secondary);
+            padding: 5px 12px;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header & Navigation -->
+    <header>
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">DataEngineer</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html" class="active">About</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="menu-btn">
+                <i class="fas fa-bars"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- About Section -->
+    <section class="about-section">
+        <div class="container">
+            <h1>About Me</h1>
+            
+            <div class="profile-container">
+                <div class="profile-image">
+                    <!-- Placeholder for profile image -->
+                    <div>Profile Photo</div>
+                </div>
+                
+                <div class="profile-content">
+                    <h2>Data Engineer with Expertise in Big Data & Cloud Technologies</h2>
+                    <p>
+                        I'm a passionate Data Engineer with over 4 years of experience in designing, implementing, and optimizing data solutions on cloud platforms. 
+                        My expertise spans across Big Data technologies, cloud infrastructure, and ETL/ELT pipeline development.
+                    </p>
+                    <p>
+                        I specialize in building scalable data architectures that transform raw data into valuable insights, enabling businesses to make data-driven decisions. 
+                        My goal is to create efficient, reliable, and maintainable data solutions that solve complex business problems.
+                    </p>
+                    
+                    <a href="resume.pdf" target="_blank" class="btn btn-primary resume-btn">
+                        <i class="fas fa-download"></i> Download Resume
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Experience Section -->
+            <section>
+                <h2>Work Experience</h2>
+                
+                <div class="experience-item">
+                    <h4>Senior Data Engineer</h4>
+                    <div class="experience-meta">
+                        <span><i class="fas fa-building"></i> Enterprise Solutions Inc.</span>
+                        <span><i class="fas fa-calendar"></i> 2021 - Present</span>
+                    </div>
+                    <p>
+                        Lead the development and optimization of ETL processes using AWS Glue, Lambda, and Redshift. 
+                        Implemented data quality checks and monitoring solutions that reduced data errors by 45%. 
+                        Designed and deployed real-time data pipelines processing over 100 million events daily.
+                    </p>
+                </div>
+                
+                <div class="experience-item">
+                    <h4>Data Engineer</h4>
+                    <div class="experience-meta">
+                        <span><i class="fas fa-building"></i> Data Insights Technology</span>
+                        <span><i class="fas fa-calendar"></i> 2019 - 2021</span>
+                    </div>
+                    <p>
+                        Developed data pipelines using Apache Airflow and Google Cloud Dataflow for processing large datasets. 
+                        Implemented data models in BigQuery for analytics and reporting. 
+                        Collaborated with data scientists to build ML data pipelines that improved prediction accuracy by 30%.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Skills Section -->
+            <section>
+                <h2>Technical Skills</h2>
+                
+                <div class="skills-grid">
+                    <div class="tech-category">
+                        <h4>Languages</h4>
+                        <div class="tech-list">
+                            <span>Python</span>
+                            <span>SQL</span>
+                            <span>Scala</span>
+                            <span>Java</span>
+                            <span>Bash</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h4>Big Data Tools</h4>
+                        <div class="tech-list">
+                            <span>Apache Spark</span>
+                            <span>Hadoop</span>
+                            <span>Kafka</span>
+                            <span>Dataflow</span>
+                            <span>Dataproc</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h4>AWS</h4>
+                        <div class="tech-list">
+                            <span>S3</span>
+                            <span>Lambda</span>
+                            <span>Glue</span>
+                            <span>Athena</span>
+                            <span>Redshift</span>
+                            <span>EMR</span>
+                            <span>Kinesis</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h4>GCP</h4>
+                        <div class="tech-list">
+                            <span>BigQuery</span>
+                            <span>Dataflow</span>
+                            <span>Dataproc</span>
+                            <span>Cloud Composer</span>
+                            <span>Pub/Sub</span>
+                            <span>Data Fusion</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h4>Databases</h4>
+                        <div class="tech-list">
+                            <span>PostgreSQL</span>
+                            <span>MongoDB</span>
+                            <span>Amazon Redshift</span>
+                            <span>BigQuery</span>
+                            <span>DynamoDB</span>
+                        </div>
+                    </div>
+                    
+                    <div class="tech-category">
+                        <h4>Other</h4>
+                        <div class="tech-list">
+                            <span>Git</span>
+                            <span>Agile</span>
+                            <span>CI/CD</span>
+                            <span>Docker</span>
+                            <span>Kubernetes</span>
+                            <span>ETL Design</span>
+                            <span>Data Modeling</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Expertise Levels -->
+            <section>
+                <h2>Expertise Levels</h2>
+                
+                <div class="skill-progress">
+                    <h4>
+                        <span>Big Data Technologies</span>
+                        <span>90%</span>
+                    </h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 90%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-progress">
+                    <h4>
+                        <span>Cloud Computing (AWS/GCP)</span>
+                        <span>85%</span>
+                    </h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-progress">
+                    <h4>
+                        <span>Data Warehouse & ETL</span>
+                        <span>95%</span>
+                    </h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 95%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-progress">
+                    <h4>
+                        <span>Python Programming</span>
+                        <span>80%</span>
+                    </h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 80%;"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-progress">
+                    <h4>
+                        <span>Data Pipeline Orchestration</span>
+                        <span>85%</span>
+                    </h4>
+                    <div class="progress-bar">
+                        <div class="progress-fill" style="width: 85%;"></div>
+                    </div>
+                </div>
+            </section>
+            
+            <!-- Education Section -->
+            <section>
+                <h2>Education</h2>
+                
+                <div class="experience-item">
+                    <h4>Master of Science in Data Science</h4>
+                    <div class="experience-meta">
+                        <span><i class="fas fa-university"></i> University of Technology</span>
+                        <span><i class="fas fa-calendar"></i> 2017 - 2019</span>
+                    </div>
+                    <p>
+                        Specialized in data engineering and distributed systems.
+                        Thesis: "Optimizing Data Pipelines for Real-Time Analytics."
+                    </p>
+                </div>
+                
+                <div class="experience-item">
+                    <h4>Bachelor of Science in Computer Science</h4>
+                    <div class="experience-meta">
+                        <span><i class="fas fa-university"></i> State University</span>
+                        <span><i class="fas fa-calendar"></i> 2013 - 2017</span>
+                    </div>
+                    <p>
+                        Focus on databases, distributed systems, and software engineering.
+                        Minor in Mathematics.
+                    </p>
+                </div>
+            </section>
+            
+            <!-- Certifications -->
+            <section>
+                <h2>Certifications</h2>
+                
+                <div class="tech-list">
+                    <span>AWS Certified Data Analytics Specialty</span>
+                    <span>Google Cloud Professional Data Engineer</span>
+                    <span>Apache Spark Developer Certification</span>
+                    <span>Databricks Certified Developer</span>
+                    <span>MongoDB Certified Developer</span>
+                </div>
+            </section>
+        </div>
+    </section>
+
+    <!-- Call to Action Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Interested in working together?</h2>
+            <p>Let's discuss how my data engineering expertise can benefit your organization.</p>
+            <a href="contact.html" class="btn btn-primary">Get in Touch <i class="fas fa-arrow-right"></i></a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>DataEngineer</h3>
+                    <p>Building scalable and efficient data solutions in the cloud.</p>
+                </div>
+                
+                <div class="footer-links">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="projects.html">Projects</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <h4>Connect</h4>
+                    <div class="social-icons">
+                        <a href="https://linkedin.com/in/data-engineer" target="_blank"><i class="fab fa-linkedin"></i></a>
+                        <a href="https://github.com/data-engineer" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="mailto:contact@dataengineer.com"><i class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; <span id="current-year">2023</span> Data Engineer Portfolio. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+    <script>
+        // Animate progress bars on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            // Delay slightly to allow for better visual effect
+            setTimeout(function() {
+                const progressBars = document.querySelectorAll('.progress-fill');
+                progressBars.forEach(bar => {
+                    const width = bar.getAttribute('style').match(/width: (.*?);/)[1];
+                    bar.style.width = '0';
+                    
+                    // Force reflow
+                    void bar.offsetWidth;
+                    
+                    // Set the actual width
+                    bar.style.width = width;
+                });
+            }, 300);
+        });
+    </script>
+</body>
+</html> 
